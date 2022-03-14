@@ -6,7 +6,7 @@ KUBERNETES_VERSION="1.23.3-00"
 # disable swap 
 sudo swapoff -a
 # keeps the swaf off during reboot
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo sed -i '/^\/swap.img/ s/^/#/' /etc/fstab
 
 #Letting iptables see bridged traffic 
 lsmod | grep br_netfilter
